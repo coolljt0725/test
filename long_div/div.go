@@ -106,10 +106,15 @@ func main() {
 			c[i] = (byte)('0')
 		}
 	}
-	for i = 0; i < len(c); i++ {
-		if c[i] > (byte)('0') {
+	var k int
+	for k = 0; k < i; k++ {
+		if c[k] > (byte)('0') {
 			break
 		}
 	}
-	fmt.Printf("%s\n", c[i:])
+	if k == i {
+		fmt.Printf("0\n")
+	} else {
+		fmt.Printf("%s\n", c[k:])
+	}
 }
